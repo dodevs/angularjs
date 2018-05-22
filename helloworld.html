@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CDN do angularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- `ng-app` diretiva para definir como uma aplicação AngularJS -->
+    <div ng-app="" ng-init="mensagem='Seja bem vindo!'">
+        <label>Name:</label>
+        
+        <!-- `ng-model` diretiva para atribuir o valor dos controles HTML (input, select..) para os dados da aplicação (variaveis) --> 
+        <!--- qualquer mudança é informada para mudar no modelo -->
+        <input type="text" ng-model="yourName" placeholder="Entre com seu nome aqui">
+        
+        <hr>
+        
+        <!-- expressão -->
+        <!-- `yourName` é uma variável -->
+        <h1>Olá {{yourName}}</h1>
+
+        <!-- `ng-bind` diretiva para atribuir os dados da aplicação (variaveis) para o HTML (views) -->
+        <p><span ng-bind="mensagem"></span></p>
+
+        <!-- Uma outra expressão -->
+        <p> Sabe quanto é 5 + 5? eu sei! é {{5+5}}</p>
+    </div>
+    
+</body>
+</html>
